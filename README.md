@@ -1,15 +1,22 @@
 # GariKini
 
-GariKini is an Android vehicle marketplace app built with **Kotlin** and **Jetpack Compose**. Users can log in, browse cars and bikes by category, and open a detail page for each vehicle.
+GariKini is an Android vehicle marketplace app (inspired by "buy, sell & more" classifieds) built with **Kotlin** and **Jetpack Compose**. Users can browse vehicle ads on a home feed, pick a category, and open a detail page for each vehicle. An admin login screen is included.
+
+## Screenshots
+
+| Admin Login | Home | Category | Detail |
+|---|---|---|---|
+| <img src="screenshots/login.jpg" width="200"> | <img src="screenshots/home.jpg" width="200"> | <img src="screenshots/category.jpg" width="200"> | <img src="screenshots/detail.jpg" width="200"> |
 
 ## Features
 
-- Login screen
-- Home screen with a banner and featured vehicles
-- Category screen to browse cars and bikes separately
-- Detail screen showing vehicle images and information
+- Admin login screen (email and password)
+- Home feed with a promotional banner and "TOP URGENT" vehicle cards
+- Top bar shortcuts: location, Category, Biman E-Ticket
+- Bottom navigation: Home, Search, Post, Chats, Profile
+- Category list: All Ads, Top Urgent, Light Vehicles, Heavy Vehicles, Heavy & Equipment Vehicles, Motorbike, Bicycle, Auto CNG, Paddle Rickshaw and more
+- Vehicle detail screen with image, name, category and description
 - Screen-to-screen movement using Jetpack Compose Navigation
-- Material 3 theme (colors, typography)
 
 ## Tech Stack
 
@@ -30,7 +37,7 @@ GariKini/
 │   ├── MainActivity.kt          # Entry point and navigation setup
 │   ├── model/
 │   │   ├── VehicleModel.kt      # Vehicle data class and sample data
-│   │   └── AdminData.kt         # Admin data
+│   │   └── AdminData.kt         # Admin login data
 │   └── ui/
 │       ├── LoginScreen.kt
 │       ├── HomeScreen.kt
@@ -42,6 +49,7 @@ GariKini/
 │           ├── Theme.kt
 │           └── Type.kt
 ├── app/src/main/res/drawable/   # Vehicle images and logo
+├── screenshots/                 # README screenshots
 ├── build.gradle.kts
 ├── settings.gradle.kts
 └── gradle/
@@ -78,7 +86,7 @@ GariKini/
 
 5. **Run the app**
 
-   Click the green **Run** button (or press `Shift + F10`).
+   Click the green **Run** button (or press `Shift + F10`). The app opens on the admin login screen; the demo admin account is defined in `model/AdminData.kt`.
 
 ### Build from the command line (optional)
 
@@ -93,12 +101,6 @@ gradlew.bat assembleDebug
 ```
 
 The APK is generated at `app/build/outputs/apk/debug/`.
-
-## Screenshots
-
-<!-- Add screenshots here after uploading them to the repo, for example:
-![Home](screenshots/home.png)
--->
 
 ## Troubleshooting
 
